@@ -1,0 +1,26 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+export HADOOP_HOME=/home/yq/TDH-Client/hadoop/hadoop/
+PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HADOOP_HOME/bin
+
+export PATH
+umask 022
+
+
+export JAVA_HOME=/home/yq/jdk1.7.0_71
+export PATH=$PATH:/data/oracle/product/112018/db_1/bin:$JAVA_HOME/bin
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib64:/usr/lib64:/usr/local/lib64:/usr/X11R6/lib64/
+export CLASSPATH=$ORACLE_HOME/JRE:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib:/tmp/jar/*
+export OSCH_HOME=/opt/orahdfs-3.8.0
+export ORAHDFS_JAR=$OSCH_HOME/jlib/orahdfs.jar
+export HDFS_BIN_PATH=$OSCH_HOME/bin
+export HADOOP_CONF_DIR=/home/yq/TDH-Client/conf/hadoop
+source /home/yq/TDH-Client/init.sh
+export ORACLE_HOME=/data/oracle/product/112018/db_1/
+export ORACLE_SID=orcl
